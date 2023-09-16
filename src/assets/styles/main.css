@@ -1,0 +1,19 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Flexo', 'Roboto', sans-serif;
+    
+    background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 12px, transparent 0, transparent 50%);
+    background-size: 42px 42px;
+    background-color: #f7f7f7;
+}
