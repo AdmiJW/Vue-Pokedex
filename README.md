@@ -8,6 +8,18 @@
 ![Screenshot](./public/images/screenshot.PNG)
 
 
+## Technologies
+
+- **👉 [Vue.js](https://vuejs.org/)**
+- **👉 [Vue Router](https://router.vuejs.org/)**
+- **👉 [PokeAPI](https://pokeapi.co/)**
+- **👉 [Quasar Framework](https://quasar.dev/)**
+- **👉 [Tanstack Query](https://tanstack.com/query)**
+- **👉 [Axios](https://axios-http.com/)**
+- **👉 [Pinia](https://pinia.vuejs.org/)**
+
+
+
 ## Attribution
 
 - Icons from [flaticon.com](https://www.flaticon.com/)
