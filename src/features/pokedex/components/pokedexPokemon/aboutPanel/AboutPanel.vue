@@ -20,10 +20,10 @@
     <tbody>
         <!-- Height -->
         <tr>
-            <td class="pr-4">
+            <td>
                 <q-icon name="height" />
             </td>
-            <td class="pr-8 font-bold">
+            <td class="font-bold">
                 Height
             </td>
             <td>
@@ -41,6 +41,19 @@
             </td>
             <td>
                 {{ pokemon.weight / 10 }} kg
+            </td>
+        </tr>
+
+        <!-- Base Experience -->
+        <tr>
+            <td>
+                <q-icon name="star" />
+            </td>
+            <td class="font-bold">
+                Base Exp
+            </td>
+            <td>
+                {{ pokemon.base_experience }}
             </td>
         </tr>
 
