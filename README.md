@@ -5,7 +5,7 @@
 
 👉 [**Live Demo**](https://vue-pokedex-nu.vercel.app/) on Vercel
 
-![Screenshot](./public/images/screenshot.png)
+![Screenshot](/public/images/screenshot.png)
 
 
 ## Attribution
