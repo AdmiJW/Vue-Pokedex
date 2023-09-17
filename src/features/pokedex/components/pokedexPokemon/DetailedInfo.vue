@@ -43,19 +43,36 @@
     
     <div class="bg-red-500 p-3 rounded-b-md">
         <div class="rounded-md p-2 border-white border-[10px] text-white">
+        <Transition appear>
             <AboutPanel
                 v-if="tab === DetailTabs.ABOUT"
                 :pokemon="pokemon"
             />
             <StatsPanel
-                v-if="tab === DetailTabs.STATS"
+                v-else-if="tab === DetailTabs.STATS"
                 :pokemon="pokemon"
             />
             <EvolutionPanel
-                v-if="tab === DetailTabs.EVOLUTION"
+                v-else
                 :pokemon="pokemon"
             />
+        </Transition>
         </div>
     </div>
 </div>
 </template>
+
+
+
+<style scoped>
+    .v-enter-active {
+        transition: transform .25s ease, opacity .5s ease;
+        transform-origin: top;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+</style>

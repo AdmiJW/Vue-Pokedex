@@ -24,15 +24,30 @@
         v-else
         class="flex gap-2 justify-center"
     >
-        <q-btn
-            size="sm"
-            color="grey-6"
-            v-for="name in store.selectedFilters"
-            :key="name"
-            :label="replaceDashesToSpace(name).toUpperCase()"
-            icon="close"
-            @click="store.removeFilter(name)"
-        />
+        <TransitionGroup appear>
+            <q-btn
+                size="sm"
+                color="grey-6"
+                v-for="name in store.selectedFilters"
+                :key="name"
+                :label="replaceDashesToSpace(name).toUpperCase()"
+                icon="close"
+                @click="store.removeFilter(name)"
+            />
+        </TransitionGroup>
     </div>
 </div>
 </template>
+
+
+
+<style scoped>
+    .v-enter-active {
+        transition: transform .25s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        transform: scale(0);
+    }
+</style>

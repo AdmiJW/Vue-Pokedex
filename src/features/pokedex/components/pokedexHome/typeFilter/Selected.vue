@@ -23,15 +23,30 @@
     <div
         v-else
         class="flex gap-1 justify-center"
-    >
-        <q-badge
-            v-for="name in store.selectedFilters"
-            :key="name"
-            class="text-white uppercase bg-gray-500 px-2 py-1"
-            :style="{ backgroundColor: getTypeStyling(name).color }"
-        >
-            {{ name.toUpperCase() }}
-        </q-badge>
+    >   
+        <TransitionGroup appear>
+            <q-badge
+                v-for="name in store.selectedFilters"
+                :key="name"
+                class="text-white uppercase bg-gray-500 px-2 py-1"
+                :style="{ backgroundColor: getTypeStyling(name).color }"
+            >
+                {{ name.toUpperCase() }}
+            </q-badge>
+        </TransitionGroup>
     </div>
 </div>
 </template>
+
+
+
+<style scoped>
+    .v-enter-active {
+        transition: transform .25s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        transform: scale(0);
+    }
+</style>

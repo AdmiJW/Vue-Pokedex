@@ -47,10 +47,24 @@
     v-else
     class="py-4 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4"
 >
-    <PokemonCard 
-        v-for="pokemon in currentPagePokemons"
-        :key="pokemon.name"
-        :pokemon="pokemon"
-    />
+    <TransitionGroup appear>
+        <PokemonCard 
+            v-for="pokemon in currentPagePokemons"
+            :key="pokemon.name"
+            :pokemon="pokemon"
+        />
+    </TransitionGroup>
 </div>
 </template>
+
+
+<style scoped>
+    .v-enter-active {
+        transition: transform .3s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        transform: scale(0);
+    }
+</style>

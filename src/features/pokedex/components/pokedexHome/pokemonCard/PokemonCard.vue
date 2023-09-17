@@ -21,9 +21,7 @@
     const { data, isLoading, isError, error } = fetchPokemonDetails(props.pokemon.name);
 
 
-    const onClick = ()=> {
-        router.push(`/pokemon/${props.pokemon.name}`);
-    }
+    const onClick = ()=> router.push(`/pokemon/${props.pokemon.name}`);
 
     watch(error, (error) => error && console.error(error));
 

@@ -25,7 +25,7 @@
 <table class="text-sm lg:text-xl block">
 
     <h3 class="py-2 text-center text-3xl font-bold">
-        Stats
+        Base Stats
     </h3>
 
     <tbody class="flex-grow">
